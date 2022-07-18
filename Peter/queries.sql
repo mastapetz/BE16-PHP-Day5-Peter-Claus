@@ -1,0 +1,1 @@
+CREATE TABLE users ( id INT(11) Auto_Increment Primary Key, first_name VARCHAR (255), last_name VARCHAR (255), password VARCHAR (255), date_of_birth DATE, email VARCHAR (255), picture VARCHAR (255) NULL, status VARCHAR (4) default 'user'); 
