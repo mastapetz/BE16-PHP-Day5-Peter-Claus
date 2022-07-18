@@ -1,6 +1,6 @@
 <?php
-require_once 'db_connect.php';
-require_once 'file_upload.php';
+require_once '../components/db_connect.php';
+require_once '../components/file_upload.php';
 
 if ($_POST) {   
     $name = $_POST['name'];
