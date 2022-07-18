@@ -57,11 +57,17 @@ mysqli_close($connect);
         .userImage {
             width: 200px;
             height: 200px;
+            position: relative;
+            border: 10px white;
         }
 
         .hero {
             background: rgb(2, 0, 36);
             background: linear-gradient(24deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);
+            position: relative;
+        }
+        .inside-hero{
+            bottom: 20px;
         }
         .manageProduct {           
                 margin: auto;
@@ -83,11 +89,11 @@ mysqli_close($connect);
 <body>
     <div class="container">
         <div class="hero">
-            <img class="userImage" src="pictures/<?php echo $row['picture']; ?>" alt="<?php echo $row['first_name']; ?>">
-            <p class="text-white">Hi <?php echo $row['first_name']; ?></p>
+            <img class="userImage" src="pictures/<?php echo $row['picture']; ?>"alt="<?php echo $row['first_name']; ?>">
+            <p class="text-white ms-3 inside-hero">Hi <?php echo $row['first_name']; ?>!</p>
         </div>
-        <a href="logout.php?logout">Sign Out</a>
-        <a href="update.php?id=<?php echo $_SESSION['user'] ?>">Update your profile</a>
+        <a href="logout.php?logout" class="btn btn-primary">Sign Out</a>
+        <a href="update.php?id=<?php echo $_SESSION['user'] ?>" class="btn btn-primary">Update your profile</a>
     </div>
 
     <br><br><br>
